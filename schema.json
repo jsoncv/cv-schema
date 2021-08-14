@@ -1,0 +1,15 @@
+{
+  "$id": "https://json-schema.org/draft/2020-12/schema",
+  "description": "A Schema for creating academic CVs and Resumes",
+  "type": "object",
+  "properties": {
+    "basics": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

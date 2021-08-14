@@ -1,0 +1,22 @@
+{
+  "name": "jsoncv-schema",
+  "version": "0.1.0",
+  "description": "JSON CV Schema",
+  "main": "validator.ts",
+  "scripts": {
+    "serve": "tsc -w",
+    "validate": "node bin/validator.js"
+  },
+  "keywords": [
+    "JSON",
+    "CV",
+    "Resume"
+  ],
+  "author": "Amin Zabardast",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.3.5",
+    "@tsconfig/node14": "^1.0.1",
+    "ajv": "^8.6.2"
+  }
+}
