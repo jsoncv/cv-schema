@@ -2,7 +2,8 @@
   "name": "jsoncv-schema",
   "version": "0.1.0",
   "description": "JSON CV Schema",
-  "main": "validator.ts",
+  "main": "index.ts",
+  "type": "module",
   "scripts": {
     "serve": "tsc -w",
     "validate": "node bin/validator.js"
