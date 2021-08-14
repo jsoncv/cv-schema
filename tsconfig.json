@@ -9,7 +9,6 @@
         "outDir": "bin"
     },
     "files": [
-        "validator.ts",
-        "index.ts"
+        "validator.ts"
     ]
 }
