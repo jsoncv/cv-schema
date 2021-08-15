@@ -1,5 +1,14 @@
 {
+  "$schema": "./schema.json",
   "basics": {
-    "name": "Rachel Green"
+    "name": "Rachel Green",
+    "loction": {
+      "address": "210 W. Green st.",
+      "city": "Champaign, IL",
+      "country": "USA"
+    },
+    "phoneNumber": "+1 (217) 555-1234",
+    "email": "rstudent@illinois.edu",
+    "url": "https://illinois.edu/"
   }
 }

@@ -1,13 +1,53 @@
 {
-  "$id": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://json-schema.org/draft/2020-09/schema",
   "description": "A Schema for creating academic CVs and Resumes",
   "type": "object",
+  "$defs": {
+    "email": {
+      "description": "User's Email",
+      "type": "string",
+      "pattern": "^[^@]+@[^@]+\\.[^@]+$"
+    },
+    "uri": {
+      "type": "string",
+      "pattern": "^https?:\/\/[^\\s$.?#].[^\\s]*$"
+    }
+  },
   "properties": {
     "basics": {
       "type": "object",
       "properties": {
         "name": {
           "type": "string"
+        },
+        "loction": {
+          "type": "object",
+          "properties": {
+            "address": {
+              "type": "string",
+              "description": "e.g. 210 W. Green st."
+            },
+            "city": {
+              "type": "string",
+              "description": "e.g. Champaign, IL"
+            },
+            "country": {
+              "type": "string",
+              "description": "e.g. USA"
+            }
+          }
+        },
+        "phoneNumber": {
+          "type": "string",
+          "description": "Phone numbers are storred in strings so you can use your own format, e.g. (217) 555-1234"
+        },
+        "email": {
+          "$ref": "#/$defs/email",
+          "description": "e.g. rstudent@illinois.edu"
+        },
+        "url": {
+          "$ref": "#/$defs/uri",
+          "description": "URL (as per RFC 3986) to your website, e.g. https://illinois.edu/"
         }
       }
     }
