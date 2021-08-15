@@ -4,11 +4,12 @@
   "type": "object",
   "$defs": {
     "email": {
-      "description": "User's Email",
+      "description": "A Simple Email Patter",
       "type": "string",
       "pattern": "^[^@]+@[^@]+\\.[^@]+$"
     },
     "uri": {
+      "descrition": "A Simple URI Pattern",
       "type": "string",
       "pattern": "^https?:\/\/[^\\s$.?#].[^\\s]*$"
     }
