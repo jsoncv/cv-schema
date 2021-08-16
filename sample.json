@@ -10,5 +10,45 @@
     "phoneNumber": "+1 (217) 555-1234",
     "email": "rstudent@illinois.edu",
     "url": "https://illinois.edu/"
-  }
+  },
+  "education": [
+    {
+      "institution": "University of Illinois",
+      "department": "English Literature",
+      "field": "English",
+      "studyType": "PhD",
+      "startDate": "2020-05-01",
+      "score": "3.5/4.0",
+      "courses": [
+        "A123 - Intro. to American Literature 1",
+        "A124 - Intro. to American Literature 2"
+      ]
+    },
+    {
+      "institution": "University of Illinois",
+      "department": "English Literature",
+      "field": "English",
+      "studyType": "MA",
+      "startDate": "2016-04-01",
+      "endDate": "2018-04-01",
+      "score": "3.5/4.0",
+      "courses": [
+        "A123 - Intro. to American Literature 1",
+        "A124 - Intro. to American Literature 2"
+      ]
+    },
+    {
+      "institution": "Butler University",
+      "department": "English Literature",
+      "field": "English and Communications",
+      "studyType": "BA",
+      "startDate": "2012-03-01",
+      "endDate": "2016-03-01",
+      "score": "3.5/4.0",
+      "courses": [
+        "A123 - Intro. to American Literature 1",
+        "A124 - Intro. to American Literature 2"
+      ]
+    }
+  ]
 }

@@ -9,9 +9,14 @@
       "pattern": "^[^@]+@[^@]+\\.[^@]+$"
     },
     "uri": {
-      "descrition": "A Simple URI Pattern",
+      "description": "A Simple URI Pattern",
       "type": "string",
       "pattern": "^https?:\/\/[^\\s$.?#].[^\\s]*$"
+    },
+    "date": {
+      "type": "string",
+      "description": "e.g. 2018-09-03",
+      "pattern": "^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$"
     }
   },
   "properties": {
@@ -49,6 +54,48 @@
         "url": {
           "$ref": "#/$defs/uri",
           "description": "URL (as per RFC 3986) to your website, e.g. https://illinois.edu/"
+        }
+      }
+    },
+    "education": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "institution": {
+            "type": "string",
+            "description": "e.g. University of Illinois"
+          },
+          "department": {
+            "type": "string",
+            "description": "e.g. Department of English Literature"
+          },
+          "field": {
+            "type": "string",
+            "description": "e.g. English and Communications"
+          },
+          "studyType": {
+            "type": "string",
+            "description": "e.g. PhD"
+          },
+          "startDate": {
+            "$ref": "#/$defs/date"
+          },
+          "endDate": {
+            "$ref": "#/$defs/date"
+          },
+          "score": {
+            "type": "string",
+            "description": "Grade Point Average, e.g. 4.0/4.0"
+          },
+          "courses": {
+            "type": "array",
+            "description": "List of courses taken",
+            "items": {
+              "type": "string",
+              "description": "e.g. A123 Into. to American Literature"
+            }
+          }
         }
       }
     }
