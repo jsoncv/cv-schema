@@ -349,6 +349,33 @@
         },
         "required": ["language"]
       }
+    },
+    "skills": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "e.g. Programming"
+          },
+          "level": {
+            "type": "string",
+            "description": "e.g. Advanced"
+          },
+          "keywords": {
+            "type": "array",
+            "description": "List some keywords pertaining to this skill",
+            "items": {
+              "type": "string",
+              "description": "e.g. Python"
+            }
+          }
+        },
+        "required": ["name"]
+      }
     }
   }
 }
