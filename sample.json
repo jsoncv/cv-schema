@@ -114,5 +114,17 @@
       "date": "2020-01-01",
       "type": "Conference"
     }
+  ],
+  "awards": [
+    {
+      "title": "Jacob K. Javitz Fellowship",
+      "date": "2020-01-01",
+      "awardedBy": "U.S. Department of Education"
+    },
+    {
+      "title": "Campus Teaching Award based on student evaluations",
+      "date": "2020-01-01",
+      "awardedBy": "University of Illinois"
+    }
   ]
 }
