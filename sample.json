@@ -158,5 +158,31 @@
       "language": "Spanish",
       "fluency": "Fluent"
     }
+  ],
+  "references": [
+    {
+      "name": "John Jay",
+      "position": "Assoc. Professor of English, University of Illinois",
+      "email": "jjay@illinois.edu",
+      "phoneNumber": "(217) 333-1112"
+    },
+    {
+      "name": "Jacob S. Snyder",
+      "position": "Assoc. Professor of English, University of Illinois",
+      "email": "jssnyd@illinois.edu",
+      "phoneNumber": "(217) 333-4700"
+    },
+    {
+      "name": "Robert Roberts",
+      "position": "Professor of English, University of Illinois",
+      "email": "rrobe3@illinois.edu",
+      "phoneNumber": "(217) 333-0203"
+    },
+    {
+      "name": "Sally Briscoe",
+      "position": "Assoc. Professor of English, University of Illinois",
+      "email": "briscoe@butler.edu",
+      "phoneNumber": "(317) 492-8763"
+    }
   ]
 }

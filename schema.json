@@ -398,6 +398,33 @@
         },
         "required": ["name"]
       }
+    },
+    "references": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "e.g. John Jay"
+          },
+          "position": {
+            "type": "string",
+            "description": "e.g. Assoc. Professor of English, University of Illinois"
+          },
+          "email": {
+            "$ref": "#/$defs/email",
+            "description": "e.g. jjay@illinois.edu"
+          },
+          "phoneNumber": {
+            "type": "string",
+            "description": "e.g (217) 333-1112"
+          }
+        },
+        "required": ["name","position"]
+      }
     }
   }
 }
