@@ -33,6 +33,10 @@
         "name": {
           "type": "string"
         },
+        "image": {
+          "$ref": "#/$defs/uri",
+          "description": "A URL pointing to your image on the internet"
+        },
         "location": {
           "type": "object",
           "properties": {
