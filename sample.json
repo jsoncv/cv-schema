@@ -102,5 +102,17 @@
       "type": "Book",
       "releaseDate": "2020-01-01"
     }
+  ],
+  "presentations": [
+    {
+      "title": "“The Ministry of Rev. Thomas H. Jones,” South Atlantic Modern Language Association. Atlanta, GA, May 20xx.",
+      "date": "2020-01-01",
+      "type": "Conference"
+    },
+    {
+      "title": "“Shackles and Stripes: The Cinematic Representation of the Southern Chain Gain.” American Literature Association. Cambridge, Massachusetts, November 20xx.",
+      "date": "2020-01-01",
+      "type": "Conference"
+    }
   ]
 }

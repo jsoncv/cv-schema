@@ -190,6 +190,30 @@
         },
         "required": ["publication","type"]
       }
+    },
+    "presentations": {
+      "type": "array",
+      "description": "List of your presentation",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": ""
+          },
+          "date": {
+            "$ref": "#/$defs/date"
+          },
+          "type": {
+            "type": "string",
+            "description": ""
+          },
+          "url": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "required": ["title"]
+      }
     }
   }
 }
