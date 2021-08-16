@@ -258,6 +258,52 @@
         },
         "required": ["title", "date", "awardedBy"]
       }
+    },
+    "professionalAffiliation": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "e.g. Southern Literary Journal"
+          },
+          "location": {
+            "type": "string",
+            "description": "e.g. University of Illinois"
+          },
+          "description": {
+            "type": "string",
+            "description": "e.g. Scientific Journal"
+          },
+          "position": {
+            "type": "string",
+            "description": "e.g. Managing Editor"
+          },
+          "url": {
+            "$ref": "#/$defs/uri"
+          },
+          "startDate": {
+            "$ref": "#/$defs/date",
+            "description": "e.g. 2020-01-01"
+          },
+          "endDate": {
+            "$ref": "#/$defs/date",
+            "description": "e.g. 2020-01-01"
+          },
+          "highlights": {
+            "type": "array",
+            "description": "Highlight of your activities in the position",
+            "items": {
+              "type": "string",
+              "description": "e.g. Process manuscripts submitted for publication"
+            }
+          }
+        },
+        "required": ["title","startDate"]
+      }
     }
   }
 }
