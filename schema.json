@@ -17,6 +17,11 @@
       "type": "string",
       "description": "e.g. 2018-09-03",
       "pattern": "^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$"
+    },
+    "datetime": {
+      "type": "string",
+      "description": "e.g. 2018-09-03Thh:mm:ss",
+      "pattern": "(\\d{4})-(\\d{2})-(\\d{2})T(\\d{2})\\:(\\d{2})\\:(\\d{2})[+-](\\d{2})\\:(\\d{2})"
     }
   },
   "additionalProperties": false,
@@ -462,6 +467,21 @@
           }
         },
         "required": ["organization","position","startDate"]
+      }
+    },
+    "meta": {
+      "type": "object",
+      "description": "Settings and any other tooling configuration lives here",
+      "additionalProperties": true,
+      "properties": {
+        "version": {
+          "type": "string",
+          "description": "Version with semver standard, e.g. v.1.0.0"
+        },
+        "lastModified": {
+          "$ref": "#/$defs/datetime",
+          "description": ""
+        }
       }
     }
   }
