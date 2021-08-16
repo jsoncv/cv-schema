@@ -2,7 +2,7 @@
   "$schema": "./schema.json",
   "basics": {
     "name": "Rachel Green",
-    "loction": {
+    "location": {
       "address": "210 W. Green st.",
       "city": "Champaign, IL",
       "country": "USA"
@@ -53,7 +53,7 @@
   ],
   "teaching": [
     {
-      "title": "Composition Instructor",
+      "position": "Composition Instructor",
       "location": "Research Writing Program, University of Illinois",
       "startDate": "2021-01-01",
       "highlights": [
@@ -61,13 +61,33 @@
       ]
     },
     {
-      "title": "Literature Instructor",
+      "position": "Literature Instructor",
       "location": "Department of English, University of Illinois",
       "startDate": "2020-01-01",
       "endDate": "2021-01-01",
       "highlights": [
         "Instructor of record for two sections of literature, including Major American Authors and Introduction to Poetry per semester.",
         "Integrated multimedia and humanities approaches to teaching literature using film and instructional technology."
+      ]
+    }
+  ],
+  "research": [
+    {
+      "position": "Doctoral Researcher",
+      "location": "Department of English, University of Illinois at Urbana-Champaign",
+      "startDate": "2020-01-01",
+      "highlights": [
+        "Conducted primary source research at numerous archives, examining publication history through multiple sources.",
+        "Examined the literature of William Faulkner, Thomas Wolfe, and Tennessee Williams, exploring their publication records, construction of literary identity, and relationship with modernism."
+      ]
+    },
+    {
+      "position": "Research Assistant",
+      "location": "Department of English, University of Illinois at Urbana-Champaign",
+      "startDate": "2020-01-01",
+      "highlights": [
+        "Assistant to Professor Robert Warren, conducting primary and secondary source research.",
+        "Organized for the “New Directions in the Study of Southern Literature: An Interdisciplinary Conference.”"
       ]
     }
   ]

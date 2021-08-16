@@ -22,11 +22,12 @@
   "properties": {
     "basics": {
       "type": "object",
+      "description": "Basic information, such as name, etc.",
       "properties": {
         "name": {
           "type": "string"
         },
-        "loction": {
+        "location": {
           "type": "object",
           "properties": {
             "address": {
@@ -55,10 +56,12 @@
           "$ref": "#/$defs/uri",
           "description": "URL (as per RFC 3986) to your website, e.g. https://illinois.edu/"
         }
-      }
+      },
+      "required": ["name"]
     },
     "education": {
       "type": "array",
+      "description": "Educational information and degrees",
       "items": {
         "type": "object",
         "properties": {
@@ -96,15 +99,17 @@
               "description": "e.g. A123 Into. to American Literature"
             }
           }
-        }
+        },
+        "required": ["institution", "studyType", "startDate"]
       }
     },
     "teaching": {
       "type": "array",
+      "description": "Teaching Experiences",
       "items": {
         "type": "object",
         "properties": {
-          "title": {
+          "position": {
             "type": "string",
             "description": "e.g. Composition Instructor"
           },
@@ -126,7 +131,40 @@
               "description": "e.g. Facilitator for seven sections of english composition."
             }
           }
-        }
+        },
+        "required": ["position", "startDate"]
+      }
+    },
+    "research": {
+      "type": "array",
+      "description": "Research Experiences",
+      "items": {
+        "type": "object",
+        "properties": {
+          "position": {
+            "type": "string",
+            "description": "e.g. Doctoral Researcher"
+          },
+          "location": {
+            "type": "string",
+            "description": "e.g. Department of English, University of Illinois"
+          },
+          "startDate": {
+            "$ref": "#/$defs/date"
+          },
+          "endDate": {
+            "$ref": "#/$defs/date"
+          },
+          "highlights": {
+            "type": "array",
+            "description": "Most important points of the activity",
+            "items": {
+              "type": "string",
+              "description": "e.g. Conducted primary source research at numerous archives."
+            }
+          }
+        },
+        "required": ["position", "startDate"]
       }
     }
   }
