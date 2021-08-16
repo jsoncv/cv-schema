@@ -261,7 +261,7 @@
     },
     "professionalAffiliation": {
       "type": "array",
-      "description": "",
+      "description": "Your professional career",
       "items": {
         "type": "object",
         "additionalProperties": true,
@@ -303,6 +303,32 @@
           }
         },
         "required": ["title","startDate"]
+      }
+    },
+    "certificates": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": ""
+          },
+          "date": {
+            "$ref": "#/$defs/date",
+            "description": "e.g. 2020-01-01"
+          },
+          "url": {
+            "$ref": "#/$defs/uri"
+          },
+          "issuedBy": {
+            "type": "string",
+            "description": ""
+          }
+        },
+        "required": ["title", "issuedBy", "date"]
       }
     }
   }
