@@ -376,6 +376,28 @@
         },
         "required": ["name"]
       }
+    },
+    "interests": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "e.g. Reading"
+          },
+          "keywords": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "description": "e.g. Fiction"
+            }
+          }
+        },
+        "required": ["name"]
+      }
     }
   }
 }
