@@ -50,5 +50,25 @@
         "A124 - Intro. to American Literature 2"
       ]
     }
+  ],
+  "teaching": [
+    {
+      "title": "Composition Instructor",
+      "location": "Research Writing Program, University of Illinois",
+      "startDate": "2021-01-01",
+      "highlights": [
+        "Facilitator for seven sections of English composition."
+      ]
+    },
+    {
+      "title": "Literature Instructor",
+      "location": "Department of English, University of Illinois",
+      "startDate": "2020-01-01",
+      "endDate": "2021-01-01",
+      "highlights": [
+        "Instructor of record for two sections of literature, including Major American Authors and Introduction to Poetry per semester.",
+        "Integrated multimedia and humanities approaches to teaching literature using film and instructional technology."
+      ]
+    }
   ]
 }

@@ -98,6 +98,36 @@
           }
         }
       }
+    },
+    "teaching": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "e.g. Composition Instructor"
+          },
+          "location": {
+            "type": "string",
+            "description": "e.g. Research Writing Program, University of Illinois"
+          },
+          "startDate": {
+            "$ref": "#/$defs/date"
+          },
+          "endDate": {
+            "$ref": "#/$defs/date"
+          },
+          "highlights": {
+            "type": "array",
+            "description": "Most important points of the activity",
+            "items": {
+              "type": "string",
+              "description": "e.g. Facilitator for seven sections of english composition."
+            }
+          }
+        }
+      }
     }
   }
 }
