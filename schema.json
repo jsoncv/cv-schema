@@ -425,6 +425,44 @@
         },
         "required": ["name","position"]
       }
+    },
+    "volunteer": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "organization": {
+            "type": "string",
+            "description": ""
+          },
+          "position": {
+            "type": "string",
+            "description": ""
+          },
+          "url": {
+            "$ref": "#/$defs/uri"
+          },
+          "startDate": {
+            "$ref": "#/$defs/date",
+            "description": "e.g. 2020-01-01"
+          },
+          "endDate": {
+            "$ref": "#/$defs/date",
+            "description": "e.g. 2020-01-01"
+          },
+          "highlights": {
+            "type": "array",
+            "description": "",
+            "items": {
+              "type": "string",
+              "description": ""
+            }
+          }
+        },
+        "required": ["organization","position","startDate"]
+      }
     }
   }
 }
