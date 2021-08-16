@@ -307,7 +307,7 @@
     },
     "certificates": {
       "type": "array",
-      "description": "",
+      "description": "Certificates you have received",
       "items": {
         "type": "object",
         "additionalProperties": true,
@@ -329,6 +329,25 @@
           }
         },
         "required": ["title", "issuedBy", "date"]
+      }
+    },
+    "languages": {
+      "type": "array",
+      "description": "List of languages you speak",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "language": {
+            "type": "string",
+            "description": "Name of the language"
+          },
+          "fluency": {
+            "type": "string",
+            "description": "e.g. Native Speaker"
+          }
+        },
+        "required": ["language"]
       }
     }
   }

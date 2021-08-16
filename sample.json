@@ -148,5 +148,15 @@
         "Review and solicit poems for possible publication."
       ]
     }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native Speaker"
+    },
+    {
+      "language": "Spanish",
+      "fluency": "Fluent"
+    }
   ]
 }
