@@ -166,6 +166,30 @@
         },
         "required": ["position", "startDate"]
       }
+    },
+    "publications": {
+      "type": "array",
+      "description": "List of your publications",
+      "items": {
+        "type": "object",
+        "properties": {
+          "publication": {
+            "type": "string",
+            "description": "Information of your publication in your desired format"
+          },
+          "releaseDate": {
+            "$ref": "#/$defs/date"
+          },
+          "type": {
+            "type": "string",
+            "description": "e.g. Journal Publication"
+          },
+          "url": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "required": ["publication","type"]
+      }
     }
   }
 }
