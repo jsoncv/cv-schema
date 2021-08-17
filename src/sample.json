@@ -17,6 +17,15 @@
       "department": "English Literature",
       "field": "English",
       "studyType": "PhD",
+      "graduateThesis": {
+        "title": "Down on the Farm: World War One and the Emergence of Literary Modernism in the American South",
+        "committee": [
+          "Margaret Black",
+          "Naomi Blue",
+          "John Jay",
+          "Robert Roberts (Chair)"
+        ]
+      },
       "startDate": "2020-05-01",
       "score": "3.5/4.0",
       "courses": [

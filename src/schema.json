@@ -114,6 +114,31 @@
               "type": "string",
               "description": "e.g. A123 Into. to American Literature"
             }
+          },
+          "graduateThesis": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+              "title": {
+                "type": "string",
+                "description": "Enter the title of your graduate thesis, if your graduation requires a thesis/dissertation work."
+              },
+              "committee": {
+                "type": "array",
+                "description": "Your thesis/dissertation jury goes here",
+                "items": {
+                  "type": "string",
+                  "description": "e.g. Margaret Black"
+                }
+              },
+              "highlights": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": ["title"]
           }
         },
         "required": ["institution", "studyType", "startDate"]
