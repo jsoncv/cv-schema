@@ -1,6 +1,6 @@
 {
   "name": "json-cv",
-  "version": "0.15.3",
+  "version": "0.15.4",
   "description": "JSON CV Schema",
   "main": "dist/validator.js",
   "scripts": {
