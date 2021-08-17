@@ -1,5 +1,8 @@
 # Schema
 
+[![GitHub Releases](https://badgen.net/github/tag/jsoncv/schema)](https://github.com/jsoncv/schema/releases)
+[![NPM Release](https://badgen.net/npm/v/@jsoncv/schema)](https://www.npmjs.com/package/@jsoncv/schema)
+
 JSON Schema for academic CV and resumes.
 
 ### Getting started
