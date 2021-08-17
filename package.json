@@ -1,19 +1,37 @@
 {
-  "name": "jsoncv-schema",
-  "version": "0.1.0",
-  "description": "JSON CV Schema",
-  "main": "validator.ts",
-  "scripts": {
-    "serve": "tsc -w",
-    "validate": "node bin/validator.js"
+  "name": "@jsoncv/schema",
+  "version": "0.15.10",
+  "description": "JSON CV's JSON Schema",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "author": {
+    "name" : "Amin Zabardast",
+    "email" : "aminzabardast@gmail.com",
+    "url" : "https://AminZabardast.com"
   },
   "keywords": [
-    "JSON",
-    "CV",
-    "Resume"
+    "json schema",
+    "academic cv",
+    "cv",
+    "academic resume",
+    "resume"
   ],
-  "author": "Amin Zabardast",
-  "license": "MIT",
+  "scripts": {
+    "serve": "tsc -w",
+    "validate": "node lib/validator.js"
+  },
+  "engines": {
+    "node": ">=14.15.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jsoncv/schema.git"
+  },
+  "homepage": "https://github.com/jsoncv/schema#readme",
+  "bugs": {
+    "url": "https://github.com/jsoncv/schema/issues"
+  },
+  "files": ["lib/**/*"],
   "devDependencies": {
     "typescript": "^4.3.5",
     "@tsconfig/node14": "^1.0.1",

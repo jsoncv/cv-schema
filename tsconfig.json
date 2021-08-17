@@ -1,14 +1,16 @@
 {
     "extends": "@tsconfig/node14/tsconfig.json",
     "compilerOptions": {
+        "target": "es6",
         "lib": [
             "es2020",
             "dom"
         ],
         "resolveJsonModule": true,
-        "outDir": "bin"
+        "outDir": "lib"
     },
     "files": [
-        "validator.ts"
+        "src/validator.ts",
+        "src/index.ts"
     ]
 }

@@ -1,0 +1,488 @@
+{
+  "$id": "https://json-schema.org/draft/2020-09/schema",
+  "description": "A Schema for creating academic CVs and Resumes",
+  "type": "object",
+  "$defs": {
+    "email": {
+      "description": "A Simple Email Patter",
+      "type": "string",
+      "pattern": "^[^@]+@[^@]+\\.[^@]+$"
+    },
+    "uri": {
+      "description": "A Simple URI Pattern",
+      "type": "string",
+      "pattern": "^https?:\/\/[^\\s$.?#].[^\\s]*$"
+    },
+    "date": {
+      "type": "string",
+      "description": "e.g. 2018-09-03",
+      "pattern": "^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$"
+    },
+    "datetime": {
+      "type": "string",
+      "description": "e.g. 2018-09-03Thh:mm:ss",
+      "pattern": "([0-9]{4})-([0-9]{2})-([0-9]{2})T([0-9]{2}):([0-9]{2}):([0-9]{2})[+-]([0-9]{2}):([0-9]{2})"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "location of this JSON schema file, either file or URL"
+    },
+    "basics": {
+      "type": "object",
+      "description": "Basic information, such as name, etc.",
+      "additionalProperties": true,
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "image": {
+          "$ref": "#/$defs/uri",
+          "description": "A URL pointing to your image on the internet"
+        },
+        "location": {
+          "type": "object",
+          "properties": {
+            "address": {
+              "type": "string",
+              "description": "e.g. 210 W. Green st."
+            },
+            "city": {
+              "type": "string",
+              "description": "e.g. Champaign, IL"
+            },
+            "country": {
+              "type": "string",
+              "description": "e.g. USA"
+            }
+          }
+        },
+        "phoneNumber": {
+          "type": "string",
+          "description": "Phone numbers are storred in strings so you can use your own format, e.g. (217) 555-1234"
+        },
+        "email": {
+          "$ref": "#/$defs/email",
+          "description": "e.g. rstudent@illinois.edu"
+        },
+        "url": {
+          "$ref": "#/$defs/uri",
+          "description": "URL (as per RFC 3986) to your website, e.g. https://illinois.edu/"
+        }
+      },
+      "required": ["name"]
+    },
+    "education": {
+      "type": "array",
+      "description": "Educational information and degrees",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "institution": {
+            "type": "string",
+            "description": "e.g. University of Illinois"
+          },
+          "department": {
+            "type": "string",
+            "description": "e.g. Department of English Literature"
+          },
+          "field": {
+            "type": "string",
+            "description": "e.g. English and Communications"
+          },
+          "studyType": {
+            "type": "string",
+            "description": "e.g. PhD"
+          },
+          "startDate": {
+            "$ref": "#/$defs/date"
+          },
+          "endDate": {
+            "$ref": "#/$defs/date"
+          },
+          "score": {
+            "type": "string",
+            "description": "Grade Point Average, e.g. 4.0/4.0"
+          },
+          "courses": {
+            "type": "array",
+            "description": "List of courses taken",
+            "items": {
+              "type": "string",
+              "description": "e.g. A123 Into. to American Literature"
+            }
+          }
+        },
+        "required": ["institution", "studyType", "startDate"]
+      }
+    },
+    "teaching": {
+      "type": "array",
+      "description": "Teaching Experiences",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "position": {
+            "type": "string",
+            "description": "e.g. Composition Instructor"
+          },
+          "location": {
+            "type": "string",
+            "description": "e.g. Research Writing Program, University of Illinois"
+          },
+          "startDate": {
+            "$ref": "#/$defs/date"
+          },
+          "endDate": {
+            "$ref": "#/$defs/date"
+          },
+          "highlights": {
+            "type": "array",
+            "description": "Most important points of the activity",
+            "items": {
+              "type": "string",
+              "description": "e.g. Facilitator for seven sections of english composition."
+            }
+          }
+        },
+        "required": ["position", "startDate"]
+      }
+    },
+    "research": {
+      "type": "array",
+      "description": "Research Experiences",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "position": {
+            "type": "string",
+            "description": "e.g. Doctoral Researcher"
+          },
+          "location": {
+            "type": "string",
+            "description": "e.g. Department of English, University of Illinois"
+          },
+          "startDate": {
+            "$ref": "#/$defs/date"
+          },
+          "endDate": {
+            "$ref": "#/$defs/date"
+          },
+          "highlights": {
+            "type": "array",
+            "description": "Most important points of the activity",
+            "items": {
+              "type": "string",
+              "description": "e.g. Conducted primary source research at numerous archives."
+            }
+          }
+        },
+        "required": ["position", "startDate"]
+      }
+    },
+    "publications": {
+      "type": "array",
+      "description": "List of your publications",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "publication": {
+            "type": "string",
+            "description": "Information of your publication in your desired format"
+          },
+          "releaseDate": {
+            "$ref": "#/$defs/date"
+          },
+          "type": {
+            "type": "string",
+            "description": "e.g. Journal Publication"
+          },
+          "url": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "required": ["publication","type"]
+      }
+    },
+    "presentations": {
+      "type": "array",
+      "description": "List of your presentation",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": ""
+          },
+          "date": {
+            "$ref": "#/$defs/date"
+          },
+          "type": {
+            "type": "string",
+            "description": ""
+          },
+          "url": {
+            "$ref": "#/$defs/uri"
+          }
+        },
+        "required": ["title"]
+      }
+    },
+    "awards": {
+      "type": "array",
+      "description": "Specify any awards you have received",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "e.g. Graduate College Dissertation Completion Award"
+          },
+          "date": {
+            "$ref": "#/$defs/date"
+          },
+          "awardedBy": {
+            "type": "string",
+            "description": "e.g. University of Illinois"
+          },
+          "highlights": {
+            "type": "array",
+            "description": "Description of the Award",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": ["title", "date", "awardedBy"]
+      }
+    },
+    "professionalAffiliation": {
+      "type": "array",
+      "description": "Your professional career",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "e.g. Southern Literary Journal"
+          },
+          "location": {
+            "type": "string",
+            "description": "e.g. University of Illinois"
+          },
+          "description": {
+            "type": "string",
+            "description": "e.g. Scientific Journal"
+          },
+          "position": {
+            "type": "string",
+            "description": "e.g. Managing Editor"
+          },
+          "url": {
+            "$ref": "#/$defs/uri"
+          },
+          "startDate": {
+            "$ref": "#/$defs/date",
+            "description": "e.g. 2020-01-01"
+          },
+          "endDate": {
+            "$ref": "#/$defs/date",
+            "description": "e.g. 2020-01-01"
+          },
+          "highlights": {
+            "type": "array",
+            "description": "Highlight of your activities in the position",
+            "items": {
+              "type": "string",
+              "description": "e.g. Process manuscripts submitted for publication"
+            }
+          }
+        },
+        "required": ["title","startDate"]
+      }
+    },
+    "certificates": {
+      "type": "array",
+      "description": "Certificates you have received",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": ""
+          },
+          "date": {
+            "$ref": "#/$defs/date",
+            "description": "e.g. 2020-01-01"
+          },
+          "url": {
+            "$ref": "#/$defs/uri"
+          },
+          "issuedBy": {
+            "type": "string",
+            "description": ""
+          }
+        },
+        "required": ["title", "issuedBy", "date"]
+      }
+    },
+    "languages": {
+      "type": "array",
+      "description": "List of languages you speak",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "language": {
+            "type": "string",
+            "description": "Name of the language"
+          },
+          "fluency": {
+            "type": "string",
+            "description": "e.g. Native Speaker"
+          }
+        },
+        "required": ["language"]
+      }
+    },
+    "skills": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "e.g. Programming"
+          },
+          "level": {
+            "type": "string",
+            "description": "e.g. Advanced"
+          },
+          "keywords": {
+            "type": "array",
+            "description": "List some keywords pertaining to this skill",
+            "items": {
+              "type": "string",
+              "description": "e.g. Python"
+            }
+          }
+        },
+        "required": ["name"]
+      }
+    },
+    "interests": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "e.g. Reading"
+          },
+          "keywords": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "description": "e.g. Fiction"
+            }
+          }
+        },
+        "required": ["name"]
+      }
+    },
+    "references": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "e.g. John Jay"
+          },
+          "position": {
+            "type": "string",
+            "description": "e.g. Assoc. Professor of English, University of Illinois"
+          },
+          "email": {
+            "$ref": "#/$defs/email",
+            "description": "e.g. jjay@illinois.edu"
+          },
+          "phoneNumber": {
+            "type": "string",
+            "description": "e.g (217) 333-1112"
+          }
+        },
+        "required": ["name","position"]
+      }
+    },
+    "volunteer": {
+      "type": "array",
+      "description": "",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "properties": {
+          "organization": {
+            "type": "string",
+            "description": ""
+          },
+          "position": {
+            "type": "string",
+            "description": ""
+          },
+          "url": {
+            "$ref": "#/$defs/uri"
+          },
+          "startDate": {
+            "$ref": "#/$defs/date",
+            "description": "e.g. 2020-01-01"
+          },
+          "endDate": {
+            "$ref": "#/$defs/date",
+            "description": "e.g. 2020-01-01"
+          },
+          "highlights": {
+            "type": "array",
+            "description": "",
+            "items": {
+              "type": "string",
+              "description": ""
+            }
+          }
+        },
+        "required": ["organization","position","startDate"]
+      }
+    },
+    "meta": {
+      "type": "object",
+      "description": "Settings and any other tooling configuration lives here",
+      "additionalProperties": true,
+      "properties": {
+        "version": {
+          "type": "string",
+          "description": "Version with semver standard, e.g. v.1.0.0"
+        },
+        "lastModified": {
+          "$ref": "#/$defs/datetime",
+          "description": ""
+        }
+      }
+    }
+  }
+}
