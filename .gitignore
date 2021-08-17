@@ -292,4 +292,3 @@ dist
 # End of https://www.toptal.com/developers/gitignore/api/node,yarn,linux,macos,jetbrains+all,visualstudiocode
 
 yarn.lock
-bin/
