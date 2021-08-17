@@ -32,8 +32,7 @@ Many editors such as *VSCode* will resolve this and suggest valid keys and struc
 
 ```json
 {
-    "$schema": "https://raw.githubusercontent.com/jsoncv/schema/master/src/schema.json", 
-    ...
+    "$schema": "https://raw.githubusercontent.com/jsoncv/schema/master/src/schema.json"
 }
 ```
 
