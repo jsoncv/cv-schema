@@ -7,4 +7,4 @@ const validate = ajv.compile(schema)
 const valid = validate(sample)
 
 if (!valid) console.log(validate.errors)
-export default schema
+export { schema }
