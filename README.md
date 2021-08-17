@@ -25,7 +25,7 @@ Require the schema like
 import { schema } from '@jsoncv/schema'
 ```
 
-### Accessing the schema from URL
+### Accessing the Schema from URL
 
 You can attach this schema's link to your JSON object with `$schema` key.
 Many editors such as *VSCode* will resolve this and suggest valid keys and structure automatically.
