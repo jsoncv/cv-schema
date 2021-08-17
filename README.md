@@ -22,6 +22,10 @@ Require the schema like
 import { schema } from '@jsoncv/schema'
 ```
 
+### Development
+
+TBA
+
 ### Contributions
 
 you can report the issues on [Github](https://github.com/jsoncv/schema/issues)
