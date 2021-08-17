@@ -1,6 +1,6 @@
 {
   "name": "@jsoncv/schema",
-  "version": "0.15.7",
+  "version": "0.15.8",
   "description": "JSON CV's JSON Schema",
   "license": "MIT",
   "main": "dist/validator.js",
@@ -25,11 +25,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jsoncv/cv-schema.git"
+    "url": "https://github.com/jsoncv/schema.git"
   },
+  "homepage": "https://github.com/jsoncv/schema#readme",
   "bugs": {
     "url": "https://github.com/jsoncv/schema/issues"
   },
+  "files": ["lib/**/*"],
   "devDependencies": {
     "typescript": "^4.3.5",
     "@tsconfig/node14": "^1.0.1",
