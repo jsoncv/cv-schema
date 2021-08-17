@@ -5,7 +5,7 @@
 
 JSON Schema for academic CV and resumes.
 
-### Getting started
+### Accessing the schema via package manager
 
 Install the package via `npm`
 
@@ -25,10 +25,43 @@ Require the schema like
 import { schema } from '@jsoncv/schema'
 ```
 
+### Accessing the schema from URL
+
+You can attach this schema's link to your JSON object with `$schema` key.
+Many editors such as *VSCode* will resolve this and suggest valid keys and structure automatically.
+
+```json
+{
+    "$schema": "https://raw.githubusercontent.com/jsoncv/schema/master/src/schema.json", 
+    ...
+}
+```
+
 ### Development
 
-TBA
+For developments environment:
+- clone the repository,
+- install the dependencies,
+- and lunch the typescript compiler.
 
-### Contributions
+```shell
+git clone https://github.com/jsoncv/schema.git
+```
 
-you can report the issues on [Github](https://github.com/jsoncv/schema/issues)
+```shell
+yarn install
+```
+
+```shell
+yarn run serve
+```
+
+For validating the changes, update the example JSON CV (`sample.json`) and run
+
+```shell
+yarn run validate
+```
+
+### Bugs, Issues, and Suggestions
+
+You can report your issues, suggestions, and possible bugs on [Github](https://github.com/jsoncv/schema/issues).
