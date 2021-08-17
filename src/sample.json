@@ -31,7 +31,8 @@
       "courses": [
         "A123 - Intro. to American Literature 1",
         "A124 - Intro. to American Literature 2"
-      ]
+      ],
+      "tags": ["Illinois"]
     },
     {
       "institution": "University of Illinois",
@@ -44,7 +45,8 @@
       "courses": [
         "A123 - Intro. to American Literature 1",
         "A124 - Intro. to American Literature 2"
-      ]
+      ],
+      "tags": ["Illinois"]
     },
     {
       "institution": "Butler University",
@@ -57,7 +59,8 @@
       "courses": [
         "A123 - Intro. to American Literature 1",
         "A124 - Intro. to American Literature 2"
-      ]
+      ],
+      "tags": ["Butler"]
     }
   ],
   "teaching": [
@@ -193,5 +196,17 @@
       "email": "briscoe@butler.edu",
       "phoneNumber": "(317) 492-8763"
     }
-  ]
+  ],
+  "meta": {
+    "filters": [
+      {
+        "name": "University of Illinois",
+        "tags": ["Illinois"]
+      },
+      {
+        "name": "Butler University",
+        "tags": ["Butler"]
+      }
+    ]
+  }
 }
