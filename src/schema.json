@@ -114,6 +114,40 @@
               "type": "string",
               "description": "e.g. A123 Into. to American Literature"
             }
+          },
+          "graduateThesis": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+              "title": {
+                "type": "string",
+                "description": "Enter the title of your graduate thesis, if your graduation requires a thesis/dissertation work."
+              },
+              "advisor": {
+                "type": "string"
+              },
+              "committee": {
+                "type": "array",
+                "description": "Your thesis/dissertation jury goes here",
+                "items": {
+                  "type": "string",
+                  "description": "e.g. Margaret Black"
+                }
+              },
+              "highlights": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": ["title"]
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         },
         "required": ["institution", "studyType", "startDate"]
@@ -146,6 +180,12 @@
             "items": {
               "type": "string",
               "description": "e.g. Facilitator for seven sections of english composition."
+            }
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
             }
           }
         },
@@ -180,6 +220,12 @@
               "type": "string",
               "description": "e.g. Conducted primary source research at numerous archives."
             }
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         },
         "required": ["position", "startDate"]
@@ -205,6 +251,12 @@
           },
           "url": {
             "$ref": "#/$defs/uri"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         },
         "required": ["publication","type"]
@@ -221,6 +273,9 @@
             "type": "string",
             "description": ""
           },
+          "event": {
+            "type": "string"
+          },
           "date": {
             "$ref": "#/$defs/date"
           },
@@ -230,6 +285,18 @@
           },
           "url": {
             "$ref": "#/$defs/uri"
+          },
+          "highlights": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         },
         "required": ["title"]
@@ -256,6 +323,12 @@
           "highlights": {
             "type": "array",
             "description": "Description of the Award",
+            "items": {
+              "type": "string"
+            }
+          },
+          "tags": {
+            "type": "array",
             "items": {
               "type": "string"
             }
@@ -305,6 +378,12 @@
               "type": "string",
               "description": "e.g. Process manuscripts submitted for publication"
             }
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         },
         "required": ["title","startDate"]
@@ -331,6 +410,12 @@
           "issuedBy": {
             "type": "string",
             "description": ""
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         },
         "required": ["title", "issuedBy", "date"]
@@ -350,6 +435,12 @@
           "fluency": {
             "type": "string",
             "description": "e.g. Native Speaker"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         },
         "required": ["language"]
@@ -357,7 +448,7 @@
     },
     "skills": {
       "type": "array",
-      "description": "",
+      "description": "A list of your skills",
       "items": {
         "type": "object",
         "additionalProperties": true,
@@ -377,6 +468,12 @@
               "type": "string",
               "description": "e.g. Python"
             }
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         },
         "required": ["name"]
@@ -384,7 +481,7 @@
     },
     "interests": {
       "type": "array",
-      "description": "",
+      "description": "A list of your interests",
       "items": {
         "type": "object",
         "additionalProperties": true,
@@ -399,6 +496,12 @@
               "type": "string",
               "description": "e.g. Fiction"
             }
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         },
         "required": ["name"]
@@ -406,7 +509,7 @@
     },
     "references": {
       "type": "array",
-      "description": "",
+      "description": "Your references",
       "items": {
         "type": "object",
         "additionalProperties": true,
@@ -426,6 +529,12 @@
           "phoneNumber": {
             "type": "string",
             "description": "e.g (217) 333-1112"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         },
         "required": ["name","position"]
@@ -433,7 +542,7 @@
     },
     "volunteer": {
       "type": "array",
-      "description": "",
+      "description": "Any volunteer job you have done",
       "items": {
         "type": "object",
         "additionalProperties": true,
@@ -464,6 +573,12 @@
               "type": "string",
               "description": ""
             }
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           }
         },
         "required": ["organization","position","startDate"]
@@ -481,6 +596,26 @@
         "lastModified": {
           "$ref": "#/$defs/datetime",
           "description": ""
+        },
+        "filters": {
+          "type": "array",
+          "description": "Filters to choose. Each filter is a combination of other tags",
+          "items": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "tags": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": ["name","tags"]
+          }
         }
       }
     }

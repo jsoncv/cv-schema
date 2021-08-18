@@ -17,12 +17,22 @@
       "department": "English Literature",
       "field": "English",
       "studyType": "PhD",
+      "graduateThesis": {
+        "title": "Down on the Farm: World War One and the Emergence of Literary Modernism in the American South",
+        "committee": [
+          "Margaret Black",
+          "Naomi Blue",
+          "John Jay",
+          "Robert Roberts (Chair)"
+        ]
+      },
       "startDate": "2020-05-01",
       "score": "3.5/4.0",
       "courses": [
         "A123 - Intro. to American Literature 1",
         "A124 - Intro. to American Literature 2"
-      ]
+      ],
+      "tags": ["Illinois"]
     },
     {
       "institution": "University of Illinois",
@@ -35,7 +45,8 @@
       "courses": [
         "A123 - Intro. to American Literature 1",
         "A124 - Intro. to American Literature 2"
-      ]
+      ],
+      "tags": ["Illinois"]
     },
     {
       "institution": "Butler University",
@@ -48,7 +59,8 @@
       "courses": [
         "A123 - Intro. to American Literature 1",
         "A124 - Intro. to American Literature 2"
-      ]
+      ],
+      "tags": ["Butler"]
     }
   ],
   "teaching": [
@@ -184,5 +196,17 @@
       "email": "briscoe@butler.edu",
       "phoneNumber": "(317) 492-8763"
     }
-  ]
+  ],
+  "meta": {
+    "filters": [
+      {
+        "name": "University of Illinois",
+        "tags": ["Illinois"]
+      },
+      {
+        "name": "Butler University",
+        "tags": ["Butler"]
+      }
+    ]
+  }
 }
