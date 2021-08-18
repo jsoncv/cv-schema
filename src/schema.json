@@ -273,6 +273,9 @@
             "type": "string",
             "description": ""
           },
+          "event": {
+            "type": "string"
+          },
           "date": {
             "$ref": "#/$defs/date"
           },
@@ -282,6 +285,12 @@
           },
           "url": {
             "$ref": "#/$defs/uri"
+          },
+          "highlights": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "tags": {
             "type": "array",
