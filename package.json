@@ -1,6 +1,6 @@
 {
   "name": "@jsoncv/schema",
-  "version": "0.15.10",
+  "version": "0.16.0",
   "description": "JSON CV's JSON Schema",
   "license": "MIT",
   "main": "lib/index.js",
