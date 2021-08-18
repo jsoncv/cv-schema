@@ -36,6 +36,8 @@ Many editors such as *VSCode* will resolve this and suggest valid keys and struc
 }
 ```
 
+![VSCode Example](https://user-images.githubusercontent.com/28408190/129867433-98d91a47-f2ed-4332-a987-7283c3d663d3.png)
+
 ### Development
 
 For developments environment:
