@@ -1,13 +1,13 @@
 {
   "name": "@jsoncv/schema",
-  "version": "0.16.0",
+  "version": "0.16.2",
   "description": "JSON CV's JSON Schema",
   "license": "MIT",
   "main": "lib/index.js",
   "author": {
-    "name" : "Amin Zabardast",
-    "email" : "aminzabardast@gmail.com",
-    "url" : "https://AminZabardast.com"
+    "name": "Amin Zabardast",
+    "email": "aminzabardast@gmail.com",
+    "url": "https://AminZabardast.com"
   },
   "keywords": [
     "json schema",
@@ -17,7 +17,7 @@
     "resume"
   ],
   "scripts": {
-    "serve": "tsc -w",
+    "serve": "tsc -w -d",
     "validate": "node lib/validator.js"
   },
   "engines": {
@@ -31,10 +31,14 @@
   "bugs": {
     "url": "https://github.com/jsoncv/schema/issues"
   },
-  "files": ["lib/**/*"],
+  "files": [
+    "lib/**/*"
+  ],
+  "dependencies": {
+    "@jsoncv/core": "^0.1.0"
+  },
   "devDependencies": {
     "typescript": "^4.3.5",
-    "@tsconfig/node14": "^1.0.1",
-    "ajv": "^8.6.2"
+    "@tsconfig/node14": "^1.0.1"
   }
 }
