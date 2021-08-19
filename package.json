@@ -1,13 +1,13 @@
 {
   "name": "@jsoncv/schema",
-  "version": "0.16.1",
+  "version": "0.16.0",
   "description": "JSON CV's JSON Schema",
   "license": "MIT",
   "main": "lib/index.js",
   "author": {
-    "name" : "Amin Zabardast",
-    "email" : "aminzabardast@gmail.com",
-    "url" : "https://AminZabardast.com"
+    "name": "Amin Zabardast",
+    "email": "aminzabardast@gmail.com",
+    "url": "https://AminZabardast.com"
   },
   "keywords": [
     "json schema",
@@ -31,7 +31,9 @@
   "bugs": {
     "url": "https://github.com/jsoncv/schema/issues"
   },
-  "files": ["lib/**/*"],
+  "files": [
+    "lib/**/*"
+  ],
   "dependencies": {
     "@jsoncv/core": "^0.1.0"
   },
