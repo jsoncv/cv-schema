@@ -32,9 +32,11 @@
     "url": "https://github.com/jsoncv/schema/issues"
   },
   "files": ["lib/**/*"],
+  "dependencies": {
+    "@jsoncv/core": "^0.1.0"
+  },
   "devDependencies": {
     "typescript": "^4.3.5",
-    "@tsconfig/node14": "^1.0.1",
-    "ajv": "^8.6.2"
+    "@tsconfig/node14": "^1.0.1"
   }
 }
