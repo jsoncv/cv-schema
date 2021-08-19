@@ -1,5 +1,5 @@
 {
-  "$schema": "./schema.json",
+  "$schema": "lib/schema.json",
   "basics": {
     "name": "Rachel Green",
     "location": {
